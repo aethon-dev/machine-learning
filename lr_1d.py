@@ -28,3 +28,11 @@ Y_hat = a*X + b
 plot.scatter(X, Y)
 plot.plot(X, Y_hat)
 plot.show()
+
+# calculate r-squared
+d1 = Y - Y_hat
+d2 = Y - Y.mean()
+
+r2 = 1 - d1.dot(d1)/d2.dot(d2)
+
+print "r-squared is: ", r2
